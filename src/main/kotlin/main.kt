@@ -1,12 +1,13 @@
 fun main() {
 
-    print("Введите количество лайков")
+    println("Введите количество лайков")
     val likes = readLine()!!.toInt()
     val lastNumber = likes % 10
+    val lastTwoNumbers = likes % 100
 
-    if (lastNumber == 1) {
-        print("Понравилось $likes человеку")
+    if (lastTwoNumbers != 11 && lastNumber == 1) {
+        println("Понравилось $likes человеку")
     } else {
-        print("Понравилось $likes людям")
+        println("Понравилось $likes людям")
     }
 }
