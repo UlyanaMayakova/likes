@@ -5,9 +5,8 @@ fun main() {
     val lastNumber = likes % 10
     val lastTwoNumbers = likes % 100
 
-    if (lastTwoNumbers != 11 && lastNumber == 1) {
-        println("Понравилось $likes человеку")
-    } else {
-        println("Понравилось $likes людям")
-    }
+    val liked = if (lastTwoNumbers != 11 && lastNumber == 1) "Понравилось $likes человеку"
+    else "Понравилось $likes людям"
+
+    println(liked)
 }
